@@ -18,7 +18,7 @@ const schema = a.schema({
 			title: a.string(),
 			content: a.string(),
 		})
-		.authorization((allow) => [allow.authenticated()]),
+		.authorization((allow) => [allow.publicApiKey()]),
 	getNoteById: a // Changed from getNote to getNoteById
 		.query()
 		.arguments({
