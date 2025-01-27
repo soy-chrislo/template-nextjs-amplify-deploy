@@ -24,15 +24,7 @@ const schema = a.schema({
 		.arguments({
 			id: a.string(),
 		})
-		.returns(
-			a.model({
-				id: a.string(),
-				title: a.string(),
-				content: a.string(),
-				createdAt: a.string(),
-				updatedAt: a.string(),
-			}),
-		)
+		.returns(a.ref("Note")) // Change this line to reference the Note model
 		.handler(a.handler.function(getNote))
 		.authorization((allow) => [allow.publicApiKey()]),
 });
