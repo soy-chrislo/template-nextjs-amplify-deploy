@@ -1,6 +1,8 @@
 import type { Schema } from "../../data/resource";
 
-export const handler: Schema["getNote"]["functionHandler"] = async (event) => {
+export const handler: Schema["getNoteById"]["functionHandler"] = async (
+	event,
+) => {
 	const { id } = event.arguments;
 
 	return {

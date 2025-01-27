@@ -19,12 +19,12 @@ const schema = a.schema({
 			content: a.string(),
 		})
 		.authorization((allow) => [allow.authenticated()]),
-	getNote: a
+	getNoteById: a // Changed from getNote to getNoteById
 		.query()
 		.arguments({
 			id: a.string(),
 		})
-		.returns(a.ref("Note")) // Change this line to reference the Note model
+		.returns(a.ref("Note"))
 		.handler(a.handler.function(getNote))
 		.authorization((allow) => [allow.publicApiKey()]),
 });
