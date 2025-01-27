@@ -1,4 +1,4 @@
-import type { Schema } from "../../../../data/resource";
+import type { Schema } from "../../data/resource";
 
 export const handler: Schema["getNote"]["functionHandler"] = async (event) => {
 	const { id } = event.arguments;
